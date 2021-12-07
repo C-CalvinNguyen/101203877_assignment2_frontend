@@ -1,5 +1,4 @@
 import React, { Component } from 'react'
-import { useNavigate } from 'react-router'
 import axios from 'axios'
 
 export default class EmployeeAdd extends Component {
@@ -33,6 +32,8 @@ export default class EmployeeAdd extends Component {
             firstName: this.state.fname, lastName: this.state.lname, emailId: this.state.email})
         .then(res => {
             console.log(res);
+            window.location = "http://localhost:3000/"
+            
         })
         .catch(err => {
             console.log(err.response.data.message)
